@@ -16,9 +16,17 @@
             background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
             color: #fff;
             padding: 20px;
-            display: flex;
-            flex-direction: column;
         }
+
+         header {
+            text-align: center;
+            padding: 40px 20px;
+            background: linear-gradient(135deg, #ff6b35 0%, #f7931e 100%);
+            border-radius: 20px;
+            margin-bottom: 40px;
+            box-shadow: 0 10px 40px rgba(255, 107, 53, 0.3);
+        }
+
 
         .background-container {
 
@@ -192,9 +200,11 @@
     </style>
 </head>
 <body>
-    <div class="background-container">
-        <img src="background.jpeg" class="background-img"/>
-    </div>
+    <header>
+        <h1>🎆 Diwali Crackers Sale 🎆</h1>
+        <p class="subtitle">Light Up Your Celebrations!</p>
+    </header>
+
 
     <div class="search-box">
         <input type="search" id="searchInput" placeholder="🔍 Search for crackers..." onkeyup="searchProducts()">
