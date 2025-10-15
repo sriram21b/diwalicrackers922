@@ -15,7 +15,7 @@
         .header {
             text-align: center;
             padding: 40px 20px;
-            background: linear-gradient(135deg, #ff6b35 0%, #f7931e 100%);
+            background: linear-gradient(to bottom, black, orange);
             border-radius: 20px;
             margin-bottom: 40px;
             box-shadow: 0 10px 40px rgba(255, 107, 53, 0.3);
@@ -28,21 +28,41 @@
             width: 100%;
             height: 100%;
             object-fit: cover;
-            opacity: 10%;
+            opacity: 60%;
+            border-radius: 20px;
             z-index: 0;
         }
         .header-content { 
             z-index: 1; 
-            opacity: 100%; 
+            filter: brightness();
+            opacity: 200%; 
+        }
+        .god-img-container {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            margin-top: -30px;
+    
+        }
+        .god1-img {
+            height: 80px;
+            width: auto;
         }
 
+        .god2-img {
+            height: 70px;
+            width: auto;
+
+        }
         .diwali-h1 {
             text-shadow:
-                0 0 10px #ffb347,
-                0 0 20px #ffb347,
-                0 0 40px #ff6b35,
-                0 0 80px #ff6b35;
+                0 0 0 0 #ffffff,
+                0 0 0 10px orange,
+                0 0 0 40px yellow,
+                0 0 0 80px #ffffff;
         }
+
+
         h1 { 
             font-size: 3em; 
             margin-bottom: 10px; 
@@ -71,6 +91,34 @@
             color: rgba(255,255,255,0.5);
         
         }
+
+     .fixed-marquee {
+  left: 0;
+  width: 200%;
+  background: linear-gradient(90deg, #e09111, #c6ada3);
+  color: white;
+  font-weight: bold;
+  font-size: 1.1em;
+  padding: 2px 0;
+  overflow: hidden;
+  margin-bottom: 20px;
+  margin-left: -100px;
+}
+
+.scroll-text {
+  display: inline-block;
+  white-space: nowrap;
+  animation: scroll-right 2.8s linear infinite;
+}
+
+@keyframes scroll-right {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(200%);
+  }
+}
         .category {
             background: rgba(255,255,255,0.05);
             backdrop-filter: blur(10px);
@@ -106,8 +154,8 @@
             color: #ff6b35; 
         }
         .products-grid {
-            display: flex;
-            flex-wrap: wrap;
+            display: grid;
+
             grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
             gap: 20px;
             overflow: hidden;
@@ -123,7 +171,6 @@
             background: linear-gradient(135deg, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0.05) 100%);
             border-radius: 12px;
             padding: 20px;
-            width: 40%;
             transition: all 0.3s ease;
             border: 1px solid rgba(255,255,255,0.1);
             cursor: pointer;
@@ -133,7 +180,7 @@
             box-shadow: 0 8px 30px rgba(255,107,53,0.3);
             border-color: #ff6b35;
         }
-        .ground-chakra-product-image {
+        .product-image {
             width: 100%; 
             height: auto; 
             display: flex; 
@@ -149,12 +196,7 @@
             border-radius: 10px; 
         }
 
-        .product-image {
-            width: 100%; height: 180px; display: flex; align-items: center; justify-content: center;
-            margin-bottom: 15px; border-radius: 8px;
-            background: linear-gradient(135deg, rgba(255,107,53,0.2), rgba(247,147,30,0.2));
-            font-size: 5em; border: 2px solid rgba(255,107,53,0.3);
-        }
+    
         .product-name { 
             font-size: 1.2em; 
             font-weight: 600; 
@@ -195,14 +237,22 @@
             <source src="diwali.mp4" type="video/mp4">
         </video>
         <div class="header-content">
-            <h1 class="diwali-h1">🎆 Diwali Crackers Sale 🎆</h1>
+            <div class="god-img-container">
+                <img src="god1.png" class="god1-img"/>
+            <img src="god2.png" class="god2-img"/>
+            </div>
+            <h1 class="diwali-h1">Diwali Crackers</h1>
             <p class="diwali-subtitle">Light Up Your Celebrations!</p>
         </div>
     </div>
     <div class="search-box">
         <input type="search" id="searchInput" placeholder="🔍 Search for crackers..." onkeyup="searchProducts()">
     </div>
-
+    <div class="fixed-marquee">
+    <div class="scroll-text">
+  Have a Safe Diwali !! 🪔
+</div>
+</div>
     <div id="content">
         <!-- GROUND CHAKRA SECTION -->
         <div class="category" id="groundChakras">
@@ -213,7 +263,7 @@
             </div>
             <div class="products-grid">
                 <div class="product-card">
-                    <div class="ground-chakra-product-image">
+                    <div class="product-image">
                         <img src="chakra.jpeg" class="chakra-img"/>
                     </div>
                     <div class="product-name">Ground Chakra Big 10 PCS</div>
