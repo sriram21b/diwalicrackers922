@@ -1,3 +1,39 @@
+
+ document.addEventListener('DOMContentLoaded', function() {
+        // Hide all products-grid initially
+        document.querySelectorAll('.products-grid').forEach(function(grid) {
+            grid.classList.remove('open');
+        });
+        /* Optionally, open the first category by default:
+        var firstGrid = document.querySelector('.category .products-grid');
+        var firstHeader = document.querySelector('.category .category-header');
+        if (firstGrid && firstHeader) {
+            firstGrid.classList.add('open');
+            firstHeader.classList.add('open');
+        }
+            */
+        // Add click handlers
+        document.querySelectorAll('.category').forEach(function(cat) {
+            var header = cat.querySelector('.category-header');
+            var grid = cat.querySelector('.products-grid');
+            header.addEventListener('click', function() {
+                var isOpen = grid.classList.contains('open');
+                // close all others
+                document.querySelectorAll('.products-grid').forEach(function(g) {
+                    g.classList.remove('open');
+                });
+                document.querySelectorAll('.category-header').forEach(function(h) {
+                    h.classList.remove('open');
+                });
+                // toggle this one
+                if (!isOpen) {
+                    grid.classList.add('open');
+                    header.classList.add('open');
+                }
+            });
+        });
+    });
+    
 function searchProducts() {
     const searchValue = document.getElementById("searchInput").value.toLowerCase()
     const categories = document.querySelectorAll(".category")
