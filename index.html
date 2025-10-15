@@ -88,11 +88,11 @@
             border-radius: 30px;
             border: 2px solid rgba(255, 107, 53, 0.5);
             background: rgba(255, 255, 255, 0.1);
-            color: #fff;
+            color: #000;
             outline: none;
         }
         .search-box input::placeholder { 
-            color: rgba(255,255,255,0.5);
+            color: rgba(20, 12, 12, 0.5);
         
         }
 
@@ -126,12 +126,11 @@
   }
 }
         .category {
-            background: rgba(255,255,255,0.05);
-            backdrop-filter: blur(10px);
+            background: rgb(118, 50, 50);
+            backdrop-filter: blur(3px);
             border-radius: 15px;
             padding: 0 14px 0 14px;
             margin-bottom: 40px;
-            border: 1px solid rgba(255,255,255,0.1);
         }
         .category-header {
             display: flex;
@@ -146,7 +145,7 @@
             display: inline-block;
             transition: transform 0.3s cubic-bezier(.1,1,.4,1);
             margin-right: 12px;
-            font-size: 1.5em;
+            font-size: 20px;
         }
         .category-header.open .arrow {
             transform: rotate(90deg);
@@ -156,7 +155,7 @@
             margin-right: 15px; 
         }
         .category-title { 
-            font-size: 2em; 
+            font-size: 20px; 
             color: #ff6b35; 
         }
         .products-grid {
@@ -171,23 +170,23 @@
         }
         .products-grid.open {
             max-height: 2000px; 
-            padding-bottom: 30px;
+            padding-bottom: 20px;
         }
         .top-products-container {
             display: none;
             flex-wrap: wrap;
         }
         .product-card {
-            background: linear-gradient(135deg, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0.05) 100%);
+            background: #fff;
             border-radius: 12px;
             padding: 20px;
             transition: all 0.3s ease;
-            border: 1px solid rgba(255,255,255,0.1);
+            border: 0.4px solid black;
             cursor: pointer;
         }
         .product-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0px 0px 10px 3px #433b3b
+            transform: translateY(-5%);
+            box-shadow: 0 0 20px 3px #bfbfbf
         }
         .product-image {
             width: 100%; 
@@ -253,13 +252,12 @@
         margin-right: 10px;
         margin-bottom: 10px;
         transition: all 0.3s ease;
-        border: 0.4px solid #000;
+        border: 0.2px solid #bfbfbf;
         cursor: pointer;
     }
     .top-product-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 8px 30px rgba(255,107,53,0.3);
-            border-color: #ff6b35;
+            transform: translateY(-3px);
+            box-shadow: 0 0 30px 3px rgba(50, 48, 47, 0.3);
         }
     .top-product-image {
             width: 100%; 
@@ -271,7 +269,7 @@
             background: transparent; 
         }
     .top-img { 
-            height: auto; 
+            height: 150px; 
             width: 100%; 
             border-radius: 10px; 
     }
@@ -282,7 +280,7 @@
             font-weight: 600;
             font-family: 'Courier New',; 
             margin-bottom: 12px; 
-            color: #ffd93d; 
+            color: #48453b; 
         }
     .top-product-details {
             display: flex; 
@@ -340,25 +338,25 @@
                 </div>
                  <div class="top-product-card">
                     <div class="top-product-image">
-                        <img src="chakra-top.jpg" class="top-img"/>
-                    </div>
-                    <div class="top-product-name">Bhoo Chakra</div>
-                    <div class="top-product-details"><span>Quantity:</span><span>10 PCS</span></div>
-                    <div class="top-product-price">₹120.00</div>
-                </div>
-                 <div class="top-product-card">
-                    <div class="top-product-image">
                         <img src="ballon.jpeg" class="top-img"/>
                     </div>
-                    <div class="top-product-name">Air Ballon</div>
+                    <div class="top-product-name">Hot Air Ballon</div>
                     <div class="top-product-details"><span>Quantity:</span><span>4 PCS</span></div>
-                    <div class="top-product-price">₹120.00</div>
+                    <div class="top-product-price">₹99.00</div>
                 </div>
                  <div class="top-product-card">
                     <div class="top-product-image">
                         <img src="chakra-top.jpg" class="top-img"/>
                     </div>
                     <div class="top-product-name">Bhoo Chakra</div>
+                    <div class="top-product-details"><span>Quantity:</span><span>4 PCS</span></div>
+                    <div class="top-product-price">₹119.00</div>
+                </div>
+                 <div class="top-product-card">
+                    <div class="top-product-image">
+                        <img src="flower-pot.jpeg" class="top-img"/>
+                    </div>
+                    <div class="top-product-name">Flower pot</div>
                     <div class="top-product-details"><span>Quantity:</span><span>10 PCS</span></div>
                     <div class="top-product-price">₹120.00</div>
                 </div>
@@ -367,7 +365,7 @@
         <div class="category" id="groundChakras">
             <div class="category-header">
                 <span class="arrow">&#9654;</span>
-                <div class="category-icon">🌀</div>
+                <div class="category-icon"></div>
                 <h2 class="category-title">Ground Chakras</h2>
             </div>
             <div class="products-grid">
