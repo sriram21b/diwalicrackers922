@@ -17,19 +17,9 @@
             var header = cat.querySelector('.category-header');
             var grid = cat.querySelector('.products-grid');
             header.addEventListener('click', function() {
-                var isOpen = grid.classList.contains('open');
-                // close all others
-                document.querySelectorAll('.products-grid').forEach(function(g) {
-                    g.classList.remove('open');
-                });
-                document.querySelectorAll('.category-header').forEach(function(h) {
-                    h.classList.remove('open');
-                });
-                // toggle this one
-                if (!isOpen) {
-                    grid.classList.add('open');
-                    header.classList.add('open');
-                }
+                    grid.classList.toggle('open');
+                    header.classList.toggle('open');
+                
             });
         });
     });
