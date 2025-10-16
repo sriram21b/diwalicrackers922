@@ -136,7 +136,7 @@
             background: rgb(118, 50, 50);
             backdrop-filter: blur(3px);
             border-radius: 15px;
-            padding: 0 14px 0 14px;
+            padding: 5px 30px;
             margin-bottom: 40px;
         }
         .category-header {
@@ -144,7 +144,8 @@
             align-items: center;
             cursor: pointer;
             margin-bottom: 20px;
-            padding: 25px 0 15px 0;
+            padding-top: 10px;
+            padding-bottom: 10px;
             border-bottom: 2px solid rgba(255, 107, 53, 0.5);
             user-select: none;
         }
@@ -157,9 +158,13 @@
         .category-header.open .arrow {
             transform: rotate(90deg);
         }
-        .category-icon { 
-            font-size: 2.5em; 
-            margin-right: 15px; 
+        .category-icon {
+            margin: 0px;
+        }
+        .category-img {
+            height: 60px;
+            margin-right: 10px;
+            padding: 0px;
         }
         .category-title { 
             font-size: 20px; 
@@ -176,7 +181,7 @@
             padding-bottom: 0;
         }
         .products-grid.open {
-            max-height: 2000px; 
+            max-height: 4000px; 
             padding-bottom: 20px;
         }
         .top-products-container {
@@ -191,6 +196,9 @@
             transition: all 0.3s ease;
             border: 0.4px solid black;
             cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
         }
         
        
@@ -199,30 +207,23 @@
         .product-name { 
             font-size: 15px; 
             font-weight: 600; 
-            
-            margin-bottom: 12px; 
             color: #ffd93d; }
-        .product-details {
-            display: flex; 
-            justify-content: 
-            space-between; 
-            margin-bottom: 8px;
-            font-size: 15px; 
-            color: rgba(233, 11, 11, 0.8);
-        }
+
         .product-price { 
             font-size: 15px; 
             font-weight: bold; 
             color: #6bcf7f; 
-            margin-top: 10px; }
+     }
         .company-badge {
             display: inline-block; padding: 4px 10px;
             background: rgba(255,107,53,0.3);
             border-radius: 15px; font-size: 0.85em; margin-top: 8px;
         }
         footer {
-            text-align: center; padding: 30px; margin-top: 50px;
-            background: rgba(255,255,255,0.05); border-radius: 15px;
+            text-align: center; 
+            padding: 30px;
+            margin-top: 20px;
+            background-color: rgb(206, 135, 21); 
         }
 @media (max-width: 768px) {
     .diwali-h1 {
@@ -348,52 +349,76 @@
                     <div class="top-product-price">₹120.00</div>
                 </div>
                 </div>
+
+        
+        <!-- FAMILY PACK SECTION -->
+        <div class="category">
+            <div class="category-header">
+                <span class="arrow">&#9654;</span>
+                <img src="Family-pack.png" class="category-img"/>
+                <h2 class="category-title">Family Pack</h2>
+            </div>
+            <div class="products-grid">
+                <!-- ... Snakes products ... -->
+                 <div class="product-card">
+                   <div class="product-name">GOLD GIFT BOX</div>
+                    <div class="product-price">₹1560.00</div>
+                </div>
+                 <div class="product-card">
+                   <div class="product-name">PLATINUM GIFT BOX</div>
+                    <div class="product-price">₹1950.00</div>
+                </div>
+                <div class="product-card">
+                   <div class="product-name">PUBG</div>
+                    <div class="product-price">₹350.00</div>
+                </div>
+                <div class="product-card">
+                   <div class="product-name">SILVER GIFT BOX</div>
+                    <div class="product-price">₹1450.00</div>
+                </div>
+            </div>
+        </div>
+
         <!-- GROUND CHAKRA SECTION -->
         <div class="category" id="groundChakras">
             <div class="category-header">
                 <span class="arrow">&#9654;</span>
-                <div class="category-icon"></div>
+               <img src="BhooChakra.png" class="category-img"/>
                 <h2 class="category-title">Ground Chakras</h2>
             </div>
             <div class="products-grid">
                 <div class="product-card">
                     
                     <div class="product-name">Ground Chakra Big 10 PCS</div>
-                    <div class="product-details"><span>Quantity:</span><span>50 BOX</span></div>
-                    <div class="product-price">₹34.10</div>
+                    <div class="product-price">₹120.00</div>
                     
                 </div>
                 <div class="product-card">
                     <div class="product-name">Ground Chakra SPL</div>
-                    <div class="product-details"><span>Quantity:</span><span>50 BOX</span></div>
-                    <div class="product-price">₹70.40</div>
+                    <div class="product-price">₹175.00</div>
                 </div>
                 <div class="product-card">
 
                     <div class="product-name">Ground DLX</div>
-                    <div class="product-details"><span>Quantity:</span><span>30 BOX</span></div>
-                    <div class="product-price">₹132</div>
+                    <div class="product-price">₹350.00</div>
                     
                 </div>
                 <div class="product-card">
                     
                     <div class="product-name">Ground Chakra Big 10 P</div>
-                    <div class="product-details"><span>Quantity:</span><span>50 BOX</span></div>
-                    <div class="product-price">₹28</div>
+                    <div class="product-price">₹100.00</div>
                     
                 </div>
                 <div class="product-card">
                     
                     <div class="product-name">Ground Chakra DLX</div>
-                    <div class="product-details"><span>Quantity:</span><span>40 BOX</span></div>
-                    <div class="product-price">₹95</div>
+                    <div class="product-price">₹250.00</div>
                     
                 </div>
                 <div class="product-card">
                     
                     <div class="product-name">Ground Chakra SPCL</div>
-                    <div class="product-details"><span>Quantity:</span><span>100 BOX</span></div>
-                    <div class="product-price">₹48</div>
+                    <div class="product-price">₹130.00</div>
                     
                 </div>
             </div>
@@ -403,7 +428,7 @@
         <div class="category">
             <div class="category-header">
                 <span class="arrow">&#9654;</span>
-                <div class="category-icon">🌸</div>
+                <img src="FlowerPot.png" class="category-img"/>
                 <h2 class="category-title">Flower Pots</h2>
             </div>
             <div class="products-grid">
@@ -411,9 +436,140 @@
                 <!-- (keep all product-card blocks as in original) -->
                 <div class="product-card">
                     
-                    <div class="product-name">Peacock Big (SPL)</div>
-                    <div class="product-details"><span>Quantity:</span><span>3 BOX</span></div>
-                    <div class="product-price">₹325</div>
+                    <div class="product-name">FLOWER POT SPL RED</div>
+                    <div class="product-price">₹350.00</div>
+                    
+                </div>
+                <div class="product-card">
+                    
+                    <div class="product-name">FLOWER POT SPCL GREEN</div>
+                    <div class="product-price">₹260.00</div>
+                    
+                </div>
+                <div class="product-card">
+                    
+                    <div class="product-name">FLOWER POT SPCL</div>
+                    <div class="product-price">₹280.00</div>
+                    
+                </div>
+                <div class="product-card">
+                    
+                    <div class="product-name">FLOWER POT ASOKA</div>
+                    <div class="product-price">₹370.00</div>
+                    
+                </div>
+                <div class="product-card">
+                    
+                    <div class="product-name">FLOWER POT GAINT</div>
+                    <div class="product-price">₹550.00</div>
+                    
+                </div>
+                <div class="product-card">
+                    
+                    <div class="product-name">COLOUR KOTI DLX 10 PC (SPCL)</div>
+                    <div class="product-price">₹780.00</div>
+                    
+                </div>
+                <div class="product-card">
+                    
+                    <div class="product-name">CHIMPANZEE (TOY FOUNTAIN SPECIAL)</div>
+                    <div class="product-price">₹370.00</div>
+                    
+                </div>
+                <div class="product-card">
+                    
+                    <div class="product-name">BLOSSOM (SPECIAL)</div>
+                    <div class="product-price">₹275.00</div>
+                    
+                </div>
+                <div class="product-card">
+                    
+                    <div class="product-name">FLOWER POTS BIG</div>
+                    <div class="product-price">₹150.00</div>
+                    
+                </div>
+                <div class="product-card">
+                    
+                    <div class="product-name">FLOWER POT SPCL</div>
+                    <div class="product-price">₹195.00</div>
+                    
+                </div>
+                <div class="product-card">
+                    
+                    <div class="product-name">FLOWER POT ASOKA</div>
+                    <div class="product-price">₹270.00</div>
+                    
+                </div>
+                <div class="product-card">
+                    
+                    <div class="product-name">COLOUR KOTI LB (SPCL)</div>
+                    <div class="product-price">₹400.00</div>
+                    
+                </div>
+                <div class="product-card">
+                    
+                    <div class="product-name">COLOUR KOTI DLX LB (SPCL)</div>
+                    <div class="product-price">₹600.00</div>
+                    
+                </div>
+                <div class="product-card">
+                    
+                    <div class="product-name">MAZA COLOUR KOTI RED & GREEN (SPCL)</div>
+                    <div class="product-price">₹385.00</div>
+                    
+                </div>
+                <div class="product-card">
+                    
+                    <div class="product-name">TINY 5 COLOUR FOUNTAIN (SPCL)</div>
+                    <div class="product-price">₹338.00</div>
+                    
+                </div>
+                <div class="product-card">
+                    
+                    <div class="product-name">MOTHIMAHAL-</div>
+                    <div class="product-price">₹625.00</div>
+                    
+                </div>
+                <div class="product-card">
+                    
+                    <div class="product-name">BONANZA SD-</div>
+                    <div class="product-price">₹900.00</div>
+                    
+                </div>
+                <div class="product-card">
+                    
+                    <div class="product-name">DEAL DELUXE-</div>
+                    <div class="product-price">₹635.00</div>
+                    
+                </div>
+                <div class="product-card">
+                    
+                    <div class="product-name">SPIRITED PARTY FLOWER POTS</div>
+                    <div class="product-price">₹975.00</div>
+                    
+                </div>
+                <div class="product-card">
+                    
+                    <div class="product-name">MUD POTS SMALL</div>
+                    <div class="product-price">₹975.00</div>
+                    
+                </div>
+                <div class="product-card">
+                    
+                    <div class="product-name">MUD POTS BIG</div>
+                    <div class="product-price">₹270.00</div>
+                    
+                </div>
+                <div class="product-card">
+                    
+                    <div class="product-name">PEACOCK RED & GREEN NO 1 (SPL)</div>
+                    <div class="product-price">₹350.00</div>
+                    
+                </div>
+                <div class="product-card">
+                    
+                    <div class="product-name">PEACOCK BIG(SPL)</div>
+                    <div class="product-price">₹750.00</div>
                     
                 </div>
             </div>
@@ -423,74 +579,238 @@
         <div class="category">
             <div class="category-header">
                 <span class="arrow">&#9654;</span>
-                <div class="category-icon">✨</div>
+                <img src="Sparkles.png" class="category-img" />
                 <h2 class="category-title">Sparklers</h2>
             </div>
             <div class="products-grid">
                 <!-- ... Sparklers products ... -->
                 <div class="product-card">
-                   
-                    <div class="product-name">75 CM Colour</div>
-                    <div class="product-details"><span>Quantity:</span><span>10 BOX</span></div>
-                    <div class="product-price">₹160</div>
-                    
+                   <div class="product-name">15 CM PLAIN</div>
+                    <div class="product-price">₹80.00</div>
+                </div>
+                <div class="product-card">
+                   <div class="product-name">15 CM COLOUR</div>
+                    <div class="product-price">₹90.00</div>
+                </div>
+                <div class="product-card">
+                   <div class="product-name">30 CM PLAIN</div>
+                    <div class="product-price">₹80.00</div>
+                </div>
+                <div class="product-card">
+                   <div class="product-name">30 CM COLOUR</div>
+                    <div class="product-price">₹90.00</div>
+                </div>
+                <div class="product-card">
+                   <div class="product-name">15 CM PLAIN</div>
+                    <div class="product-price">₹70.00</div>
+                </div>
+                <div class="product-card">
+                   <div class="product-name">15 CM COLOUR</div>
+                    <div class="product-price">₹75.00</div>
+                </div>
+                <div class="product-card">
+                   <div class="product-name">15 CM GREEN</div>
+                    <div class="product-price">₹80.00</div>
+                </div>
+                <div class="product-card">
+                   <div class="product-name">15 CM RED</div>
+                    <div class="product-price">₹90.00</div>
+                </div>
+                <div class="product-card">
+                   <div class="product-name">30 CM PLAIN</div>
+                    <div class="product-price">₹70.00</div>
+                </div>
+                <div class="product-card">
+                   <div class="product-name">30 CM COLOUR</div>
+                    <div class="product-price">₹75.00</div>
+                </div>
+                <div class="product-card">
+                   <div class="product-name">30 CM GREEN</div>
+                    <div class="product-price">₹75.00</div>
+                </div>
+                <div class="product-card">
+                   <div class="product-name">30 CM RED</div>
+                    <div class="product-price">₹80.00</div>
+                </div>
+                <div class="product-card">
+                   <div class="product-name">50 CM PLAIN</div>
+                    <div class="product-price">₹240.00</div>
+                </div>
+                <div class="product-card">
+                   <div class="product-name">50 CM COLOUR</div>
+                    <div class="product-price">₹250.00</div>
+                </div>
+                <div class="product-card">
+                   <div class="product-name">50 CM COLOUR</div>
+                    <div class="product-price">₹250.00</div>
+                </div>
+                <div class="product-card">
+                   <div class="product-name">75 CM PLAIN</div>
+                    <div class="product-price">₹380.00</div>
+                </div>
+                <div class="product-card">
+                   <div class="product-name">75 CM COLOUR</div>
+                    <div class="product-price">₹450.00</div>
+                </div>
+                <div class="product-card">
+                   <div class="product-name">LEMON TREE (SPECIAL)</div>
+                    <div class="product-price">₹200.00</div>
                 </div>
             </div>
         </div>
 
-        <!-- NOVELTIES SECTION -->
+        <!-- PENCILS SECTION -->
         <div class="category">
             <div class="category-header">
                 <span class="arrow">&#9654;</span>
-                <div class="category-icon">🎪</div>
-                <h2 class="category-title">Novelties</h2>
+                <img src="Pencils.png" class="category-img"/>
+                <h2 class="category-title">Pencils</h2>
             </div>
             <div class="products-grid">
                 <!-- ... Novelties products ... -->
                 <div class="product-card">
-                   
-                    <div class="product-name">Musical Torch (SPL)</div>
-                    <div class="product-details"><span>Quantity:</span><span>5 BOX</span></div>
-                    <div class="product-price">₹115</div>
-                    
+                   <div class="product-name">MAGIC SPCL PENCIL</div>
+                    <div class="product-price">₹180.00</div>
+                </div>
+                <div class="product-card">
+                   <div class="product-name">MAGIC PENCIL DLX</div>
+                    <div class="product-price">₹195.00</div>
+                </div>
+                <div class="product-card">
+                   <div class="product-name">GERMAN CANDLE</div>
+                    <div class="product-price">₹260.00</div>
+                </div>
+                <div class="product-card">
+                   <div class="product-name">ITILIAN TORCHERS</div>
+                    <div class="product-price">₹360.00</div>
+                </div>
+                <div class="product-card">
+                   <div class="product-name">KUR KURE-</div>
+                    <div class="product-price">₹225.00</div>
+                </div>
+                <div class="product-card">
+                   <div class="product-name">MIAMI RED-</div>
+                    <div class="product-price">₹235.00</div>
+                </div>
+                <div class="product-card">
+                   <div class="product-name">VENNA MUDDALU</div>
+                    <div class="product-price">₹235.00</div>
+                </div>
+                <div class="product-card">
+                   <div class="product-name">12 PENCILS DIX UM</div>
+                    <div class="product-price">₹120.00</div>
+                </div>
+                <div class="product-card">
+                   <div class="product-name">18 PENCILS DLX U.V</div>
+                    <div class="product-price">₹200.00</div>
+                </div>
+                <div class="product-card">
+                   <div class="product-name">15 PENCILS DLX U.V</div>
+                    <div class="product-price">₹150.00</div>
+                </div>
+                <div class="product-card">
+                   <div class="product-name">MUSICAL TORCH (SPL)</div>
+                    <div class="product-price">₹290.00</div>
+                </div>
+                <div class="product-card">
+                   <div class="product-name">TWINKLING STARS BIG 1.5</div>
+                    <div class="product-price">₹95.00</div>
+                </div>
+                <div class="product-card">
+                   <div class="product-name">TWINKLING STARS DLX 4 THAALLU</div>
+                    <div class="product-price">₹187.00</div>
+                </div>
+                <div class="product-card">
+                   <div class="product-name">MAGIC BUZZ -</div>
+                    <div class="product-price">₹367.00</div>
+                </div>
+                <div class="product-card">
+                   <div class="product-name">WIRE SPECIAL -</div>
+                    <div class="product-price">₹290.00</div>
+                </div>
+                <div class="product-card">
+                   <div class="product-name">1.5 THAALLU</div>
+                    <div class="product-price">₹70.00</div>
+                </div>
+                <div class="product-card">
+                   <div class="product-name">4 TWINKLING STARS -</div>
+                    <div class="product-price">₹180.00</div>
+                </div>
+                <div class="product-card">
+                   <div class="product-name">WIRE SPL-</div>
+                    <div class="product-price">₹235.00</div>
                 </div>
             </div>
         </div>
-
-        <!-- TWINKLING STARS SECTION -->
+         
+         <!-- WALA SECTION -->
         <div class="category">
             <div class="category-header">
                 <span class="arrow">&#9654;</span>
-                <div class="category-icon">⭐</div>
-                <h2 class="category-title">Twinkling Stars</h2>
+                <img src="Wala.png" class="category-img"/>
+                <h2 class="category-title">Wala</h2>
             </div>
             <div class="products-grid">
-                <!-- ... Twinkling Stars products ... -->
-                <div class="product-card">
-                   
-                    <div class="product-name">Wire SPL</div>
-                    <div class="product-details"><span>Quantity:</span><span>10 BOX</span></div>
-                    <div class="product-price">₹90</div>
-                    
+                <!-- ... Bombs products ... -->
+                 <div class="product-card">
+                   <div class="product-name">1K BIJILI</div>
+                    <div class="product-price">₹850.00</div>
                 </div>
-            </div>
-        </div>
-
-        <!-- ATOM BOMBS (LAXMI) SECTION -->
-        <div class="category">
-            <div class="category-header">
-                <span class="arrow">&#9654;</span>
-                <div class="category-icon">💣</div>
-                <h2 class="category-title">Atom Bombs (Laxmi)</h2>
-            </div>
-            <div class="products-grid">
-                <!-- ... Atom Bombs products ... -->
-                <div class="product-card">
-                    
-                    <div class="product-name">Gold Laxmi</div>
-                    <div class="product-details"><span>Quantity:</span><span>50 PKT</span></div>
-                    <div class="product-price">₹17</div>
-                    
+                 <div class="product-card">
+                   <div class="product-name">5K BIJILI</div>
+                    <div class="product-price">₹5000.00</div>
+                </div>
+                 <div class="product-card">
+                   <div class="product-name">1OK BIJILI</div>
+                    <div class="product-price">₹8000.00</div>
+                </div>
+                 <div class="product-card">
+                   <div class="product-name">RED BIJILI 100 PC</div>
+                    <div class="product-price">₹80.00</div>
+                </div>
+                 <div class="product-card">
+                   <div class="product-name">28 WALA PINNLE</div>
+                    <div class="product-price">₹35.00</div>
+                </div>
+                 <div class="product-card">
+                   <div class="product-name">28 GAINT PINNLE</div>
+                    <div class="product-price">₹50.00</div>
+                </div>
+                 <div class="product-card">
+                   <div class="product-name">24 DLX</div>
+                    <div class="product-price">₹100.00</div>
+                </div>
+                 <div class="product-card">
+                   <div class="product-name">100 DLX</div>
+                    <div class="product-price">₹400.00</div>
+                </div>
+                 <div class="product-card">
+                   <div class="product-name">100 DLX MEGA</div>
+                    <div class="product-price">₹675.00</div>
+                </div>
+                 <div class="product-card">
+                   <div class="product-name">100 DARK MAN</div>
+                    <div class="product-price">₹75.00</div>
+                </div>
+                 <div class="product-card">
+                   <div class="product-name">100 WALA</div>
+                    <div class="product-price">₹75.00</div>
+                </div>
+                 <div class="product-card">
+                   <div class="product-name">1K BIJILI</div>
+                    <div class="product-price">₹350.00</div>
+                </div>
+                 <div class="product-card">
+                   <div class="product-name">2K BIJILI</div>
+                    <div class="product-price">₹675.00</div>
+                </div>
+                 <div class="product-card">
+                   <div class="product-name">5K BIJILI</div>
+                    <div class="product-price">₹1686.00</div>
+                </div>
+                 <div class="product-card">
+                   <div class="product-name">10K BIJILI</div>
+                    <div class="product-price">₹3375.00</div>
                 </div>
             </div>
         </div>
@@ -499,18 +819,84 @@
         <div class="category">
             <div class="category-header">
                 <span class="arrow">&#9654;</span>
-                <div class="category-icon">💥</div>
+                <img src="Atom-Bombs.png" class="category-img"/>
                 <h2 class="category-title">Bombs</h2>
             </div>
             <div class="products-grid">
-                <!-- ... Bombs products ... -->
+                <!-- ... Twinkling Stars products ... -->
                 <div class="product-card">
-                   
-                    <div class="product-name">Lalmirchi Bomb</div>
-                    <div class="product-details"><span>Quantity:</span><span>10 BOX</span></div>
-                    <div class="product-price">₹63</div>
-                   
+                   <div class="product-name">4 LAXMI</div>
+                    <div class="product-price">₹70.00</div>
                 </div>
+                <div class="product-card">
+                   <div class="product-name">5 GANESH</div>
+                    <div class="product-price">₹85.00</div>
+                </div>
+                <div class="product-card">
+                   <div class="product-name">4 DLX GANESH</div>
+                    <div class="product-price">₹55.00</div>
+                </div>
+                <div class="product-card">
+                   <div class="product-name">3.5 LAXMI</div>
+                    <div class="product-price">₹30.00</div>
+                </div>
+                <div class="product-card">
+                   <div class="product-name">4 LAXMI</div>
+                    <div class="product-price">₹37.00</div>
+                </div>
+                <div class="product-card">
+                   <div class="product-name">GOLD LAXMI</div>
+                    <div class="product-price">₹50.00</div>
+                </div>
+                <div class="product-card">
+                   <div class="product-name">HYDRO BOMB</div>
+                    <div class="product-price">₹185.00</div>
+                </div>
+                <div class="product-card">
+                   <div class="product-name">JURASSIC BOMB</div>
+                    <div class="product-price">₹315.00</div>
+                </div>
+                <div class="product-card">
+                   <div class="product-name">MIGHTY BOMB</div>
+                    <div class="product-price">₹365.00</div>
+                </div>
+                <div class="product-card">
+                   <div class="product-name">HYDRO BOMB</div>
+                    <div class="product-price">₹135.00</div>
+                </div>
+                <div class="product-card">
+                   <div class="product-name">SUMO BOMB</div>
+                    <div class="product-price">₹197.00</div>
+                </div>
+                <div class="product-card">
+                   <div class="product-name">SS DIGITAL</div>
+                    <div class="product-price">₹445.00</div>
+                </div>
+                <div class="product-card">
+                   <div class="product-name">555 BOMB</div>
+                    <div class="product-price">₹300.00</div>
+                </div>
+                <div class="product-card">
+                   <div class="product-name">GANGA JAMUNA</div>
+                    <div class="product-price">₹135.00</div>
+                </div>
+                <div class="product-card">
+                   <div class="product-name">2 SOUND BOMB</div>
+                    <div class="product-price">₹65.00</div>
+                </div>
+                <div class="product-card">
+                   <div class="product-name">3 SOUNDS</div>
+                    <div class="product-price">₹70.00</div>
+                </div>
+                <div class="product-card">
+                   <div class="product-name">23/4 BIRD OUT</div>
+                    <div class="product-price">₹500.00</div>
+                </div>
+                <div class="product-card">
+                   <div class="product-name">LALMIRCHI BOMB</div>
+                    <div class="product-price">₹165.00</div>
+                </div>
+
             </div>
         </div>
 
@@ -518,55 +904,66 @@
         <div class="category">
             <div class="category-header">
                 <span class="arrow">&#9654;</span>
-                <div class="category-icon">🎯</div>
-                <h2 class="category-title">Multi Shots</h2>
+                <img src="Shots.png" class="category-img"/>
+                <h2 class="category-title">Shots</h2>
             </div>
             <div class="products-grid">
-                <!-- ... Multi Shots products ... -->
+                <!-- ... Atom Bombs products ... -->
                 <div class="product-card">
-                   
-                    <div class="product-name">Hand 18 Shots PC (Special)</div>
-                    <div class="product-details"><span>Quantity:</span><span>5 BOX</span></div>
-                    <div class="product-price">₹400</div>
-                   
+                   <div class="product-name">7 SHOTS</div>
+                    <div class="product-price">₹270.00</div>
                 </div>
-            </div>
-        </div>
-
-        <!-- BIJILI (CRACKLING) SECTION -->
-        <div class="category">
-            <div class="category-header">
-                <span class="arrow">&#9654;</span>
-                <div class="category-icon">⚡</div>
-                <h2 class="category-title">Bijili (Crackling)</h2>
-            </div>
-            <div class="products-grid">
-                <!-- ... Bijili products ... -->
                 <div class="product-card">
-                   
-                    <div class="product-name">10K Bijili</div>
-                    <div class="product-details"><span>Quantity:</span><span>2 BOX</span></div>
-                    <div class="product-price">₹1350</div>
-                    
+                   <div class="product-name">MEGA STAR 12</div>
+                    <div class="product-price">₹415.00</div>
                 </div>
-            </div>
-        </div>
-
-        <!-- ROCKETS SECTION -->
-        <div class="category">
-            <div class="category-header">
-                <span class="arrow">&#9654;</span>
-                <div class="category-icon">🚀</div>
-                <h2 class="category-title">Rockets</h2>
-            </div>
-            <div class="products-grid">
-                <!-- ... Rockets products ... -->
                 <div class="product-card">
-                    
-                    <div class="product-name">Rocket Bomb</div>
-                    <div class="product-details"><span>Quantity:</span><span>20 BOX</span></div>
-                    <div class="product-price">₹43</div>
-                    
+                   <div class="product-name">FLINSTONES 10 SHOTS</div>
+                    <div class="product-price">₹380.00</div>
+                </div>
+                <div class="product-card">
+                   <div class="product-name">PEPPA BIG 12 SHOTS</div>
+                    <div class="product-price">₹700.00</div>
+                </div>
+                <div class="product-card">
+                   <div class="product-name">DOUBLE DECKER 25 SHOTS</div>
+                    <div class="product-price">₹1685.00</div>
+                </div>
+                <div class="product-card">
+                   <div class="product-name">SIGNATURE 60 SHOTS</div>
+                    <div class="product-price">₹3250.00</div>
+                </div>
+                <div class="product-card">
+                   <div class="product-name">7 SHOTS 5 PC</div>
+                    <div class="product-price">₹290.00</div>
+                </div>
+                <div class="product-card">
+                   <div class="product-name">CHOTA SHOT</div>
+                    <div class="product-price">₹100.00</div>
+                </div>
+                <div class="product-card">
+                   <div class="product-name">SINGLE SHOT 2 IN</div>
+                    <div class="product-price">₹300.00</div>
+                </div>
+                <div class="product-card">
+                   <div class="product-name">SINGLE SHOT 3 PC</div>
+                    <div class="product-price">₹450.00</div>
+                </div>
+                <div class="product-card">
+                   <div class="product-name">30 SHOTS</div>
+                    <div class="product-price">₹1000.00</div>
+                </div>
+                <div class="product-card">
+                   <div class="product-name">60 SHOTS</div>
+                    <div class="product-price">₹1700.00</div>
+                </div>
+                <div class="product-card">
+                   <div class="product-name">120 SHOTS</div>
+                    <div class="product-price">₹3800.00</div>
+                </div>
+                <div class="product-card">
+                   <div class="product-name">HAND 18 SHOTS PC (SPECIAL)</div>
+                    <div class="product-price">₹1000.00</div>
                 </div>
             </div>
         </div>
@@ -575,17 +972,272 @@
         <div class="category">
             <div class="category-header">
                 <span class="arrow">&#9654;</span>
-                <div class="category-icon">🐍</div>
+                <img src="Snakes.png" class="category-img"/>
                 <h2 class="category-title">Snakes</h2>
             </div>
             <div class="products-grid">
                 <!-- ... Snakes products ... -->
+                 <div class="product-card">
+                   <div class="product-name">ANAKONDA</div>
+                    <div class="product-price">₹147.00</div>
+                </div>
+                 <div class="product-card">
+                   <div class="product-name">SNAKE BIG</div>
+                    <div class="product-price">₹385.00</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ROCKETS SECTION -->
+        <div class="category">
+            <div class="category-header">
+                <span class="arrow">&#9654;</span>
+               <img src="Rockets.png" class="category-img"/>
+                <h2 class="category-title">Rockets</h2>
+            </div>
+            <div class="products-grid">
+                <!-- ... Multi Shots products ... -->
+                  <div class="product-card">
+                   <div class="product-name">BIG ROCKETS</div>
+                    <div class="product-price">₹195.00</div>
+                </div>
+                 <div class="product-card">
+                   <div class="product-name">WHISTLING ROCKETS</div>
+                    <div class="product-price">₹325.00</div>
+                </div>
+                 <div class="product-card">
+                   <div class="product-name">ROCKET BOMB-</div>
+                    <div class="product-price">₹125.00</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- GUNS SECTION -->
+        <div class="category">
+            <div class="category-header">
+                <span class="arrow">&#9654;</span>
+                <img src="Guns.png" class="category-img"/>
+                <h2 class="category-title">GUNS</h2>
+            </div>
+            <div class="products-grid">
+                 <div class="product-card">
+                   <div class="product-name">RING GUNS 0055C</div>
+                    <div class="product-price">₹80.00</div>
+                </div>
+                 <div class="product-card">
+                   <div class="product-name">RG RINGS GUNS 0077 C</div>
+                    <div class="product-price">₹130.00</div>
+                </div>
+                 <div class="product-card">
+                   <div class="product-name">RING GUNS SP 53 C</div>
+                    <div class="product-price">₹315.00</div>
+                </div>
+                 <div class="product-card">
+                   <div class="product-name">RING GUNS SP 56 C</div>
+                    <div class="product-price">₹375.00</div>
+                </div>
+                 <div class="product-card">
+                   <div class="product-name">RG RING GUNS AK 45 B</div>
+                    <div class="product-price">₹450.00</div>
+                </div>
+                 <div class="product-card">
+                   <div class="product-name">RING GUNS AK 47 B</div>
+                    <div class="product-price">₹470.00</div>
+                </div>
+                 <div class="product-card">
+                   <div class="product-name">MATCH GUN CT 57</div>
+                    <div class="product-price">₹270.00</div>
+                </div>
+                 <div class="product-card">
+                   <div class="product-name">MATCH GUN CT 948</div>
+                    <div class="product-price">₹125.00</div>
+                </div>
+            </div>
+        </div>
+
+         <!-- SPECIAL ITEMS SECTION -->
+        <div class="category">
+            <div class="category-header">
+                <span class="arrow">&#9654;</span>
+                <img src="Special-items.png" class="category-img"/>
+                <h2 class="category-title">SPECIAL ITEMS</h2>
+            </div>
+            <div class="products-grid">
+                 <div class="product-card">
+                   <div class="product-name">TUITY FRUITY</div>
+                    <div class="product-price">₹435.00</div>
+                </div>
+                 <div class="product-card">
+                   <div class="product-name">CLASSIC WHEEL</div>
+                    <div class="product-price">₹180.00</div>
+                </div>
+                 <div class="product-card">
+                   <div class="product-name">BOOM BOOM</div>
+                    <div class="product-price">₹800.00</div>
+                </div>
+                 <div class="product-card">
+                   <div class="product-name">SPIDER MAN</div>
+                    <div class="product-price">₹660.00</div>
+                </div>
                 <div class="product-card">
-                    
-                    <div class="product-name">Snake Big</div>
-                    <div class="product-details"><span>Quantity:</span><span>2 BOX</span></div>
-                    <div class="product-price">₹150</div>
-                    
+                   <div class="product-name">KINDER JOY</div>
+                    <div class="product-price">₹565.00</div>
+                </div>
+                 <div class="product-card">
+                   <div class="product-name">PEARL DROPS</div>
+                    <div class="product-price">₹395.00</div>
+                </div>
+                 <div class="product-card">
+                   <div class="product-name">RANGOON</div>
+                    <div class="product-price">₹345.00</div>
+                </div>
+                 <div class="product-card">
+                   <div class="product-name">NARAGASURA</div>
+                    <div class="product-price">₹355.00</div>
+                </div>
+                 <div class="product-card">
+                   <div class="product-name">PARTY APPLE</div>
+                    <div class="product-price">₹435.00</div>
+                </div>
+                 <div class="product-card">
+                   <div class="product-name">ELECTRIC STONE</div>
+                    <div class="product-price">₹70.00</div>
+                </div>
+                 <div class="product-card">
+                   <div class="product-name">GOLDEN RABBIT</div>
+                    <div class="product-price">₹372.00</div>
+                </div>
+                 <div class="product-card">
+                   <div class="product-name">STAR BUDS</div>
+                    <div class="product-price">₹267.0</div>
+                </div>
+                 <div class="product-card">
+                   <div class="product-name">BEAUTY & BEAST</div>
+                    <div class="product-price">₹832.00</div>
+                </div>
+                 <div class="product-card">
+                   <div class="product-name">POPS</div>
+                    <div class="product-price">₹125.00</div>
+                </div>
+                 <div class="product-card">
+                   <div class="product-name">JOSH</div>
+                    <div class="product-price">₹180.00</div>
+                </div>
+                 <div class="product-card">
+                   <div class="product-name">NINJA</div>
+                    <div class="product-price">₹240.00</div>
+                </div>
+                 <div class="product-card">
+                   <div class="product-name">10 COMENDERS</div>
+                    <div class="product-price">₹287.00</div>
+                </div>
+                 <div class="product-card">
+                   <div class="product-name">DASARA</div>
+                    <div class="product-price">₹337.00</div>
+                </div>
+                 <div class="product-card">
+                   <div class="product-name">SUPER HEROES</div>
+                    <div class="product-price">₹475.00</div>
+                </div>
+                 <div class="product-card">
+                   <div class="product-name">DORA DORA</div>
+                    <div class="product-price">₹70.00</div>
+                </div>
+                 <div class="product-card">
+                   <div class="product-name">TIN TIN</div>
+                    <div class="product-price">₹45.00</div>
+                </div>
+                 <div class="product-card">
+                   <div class="product-name">ELECTRIC STONES</div>
+                    <div class="product-price">₹65.00</div>
+                </div>
+                 <div class="product-card">
+                   <div class="product-name">NAVARANGA STONS</div>
+                    <div class="product-price">₹95.00</div>
+                </div>
+                 <div class="product-card">
+                   <div class="product-name">SHOWER MIX</div>
+                    <div class="product-price">₹180.00</div>
+                </div>
+                 <div class="product-card">
+                   <div class="product-name">HELICOPTER</div>
+                    <div class="product-price">₹190.00</div>
+                </div>
+                 <div class="product-card">
+                   <div class="product-name">WHISTLING DLX</div>
+                    <div class="product-price">₹175.00</div>
+                </div>
+                 <div class="product-card">
+                   <div class="product-name">DISCO WHEEL</div>
+                    <div class="product-price">₹137.00</div>
+                </div>
+                 <div class="product-card">
+                   <div class="product-name">4*4 WHEEL</div>
+                    <div class="product-price">₹1250.00</div>
+                </div>
+                 <div class="product-card">
+                   <div class="product-name">DARLING DANCER</div>
+                    <div class="product-price">₹1850.00</div>
+                </div>
+                 <div class="product-card">
+                   <div class="product-name">SPINNER SPL</div>
+                    <div class="product-price">₹165.00</div>
+                </div>
+                 <div class="product-card">
+                   <div class="product-name">TIN SERIES</div>
+                    <div class="product-price">₹269.00</div>
+                </div>
+                 <div class="product-card">
+                   <div class="product-name">GUBERA</div>
+                    <div class="product-price">₹270.00</div>
+                </div>
+                 <div class="product-card">
+                   <div class="product-name">18 ITEMS MINIONS</div>
+                    <div class="product-price">₹800.00</div>
+                </div>
+                 <div class="product-card">
+                   <div class="product-name">24 ITEMS FUNLAND</div>
+                    <div class="product-price">₹935.00</div>
+                </div>
+                 <div class="product-card">
+                   <div class="product-name">FIRE EGG</div>
+                    <div class="product-price">₹280.00</div>
+                </div>
+                 <div class="product-card">
+                   <div class="product-name">WINTER RAIN</div>
+                    <div class="product-price">₹275.00</div>
+                </div>
+                 <div class="product-card">
+                   <div class="product-name">SS BAT</div>
+                    <div class="product-price">₹300.00</div>
+                </div>
+                 <div class="product-card">
+                   <div class="product-name">GADHA</div>
+                    <div class="product-price">₹500.00</div>
+                </div>
+                 <div class="product-card">
+                   <div class="product-name">GUITAR</div>
+                    <div class="product-price">₹550.00</div>
+                </div>
+                 <div class="product-card">
+                   <div class="product-name">SWEET 16</div>
+                    <div class="product-price">₹870.00</div>
+                </div>
+                 <div class="product-card">
+                   <div class="product-name">SNAKE CARTONES</div>
+                    <div class="product-price">₹235.00</div>
+                </div>
+                 <div class="product-card">
+                   <div class="product-name">ROCK MUSIC</div>
+                    <div class="product-price">₹375.00</div>
+                </div>
+                 <div class="product-card">
+                   <div class="product-name">40 ITEMS</div>
+                    <div class="product-price">₹1900.00</div>
+                </div>
+                 <div class="product-card">
+                   <div class="product-name">SINGLES 3.5 INCH UV -</div>
+                    <div class="product-price">₹600.00</div>
                 </div>
             </div>
         </div>
