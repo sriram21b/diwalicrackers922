@@ -12,6 +12,8 @@
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             background-color: #fff;
             color: #fff;
+            display: flex;
+            flex-direction: column;
         }
         .header {
             text-align: center;
@@ -22,6 +24,8 @@
             margin-bottom: 20px;
             box-shadow: 0 10px 40px rgba(255, 107, 53, 0.3);
             position: relative;
+            display: flex;
+            flex-direction: column;
         }
         .header-video {
             position: absolute;
@@ -38,6 +42,8 @@
             z-index: 1; 
             filter: brightness();
             opacity: 200%; 
+            display: flex;
+            flex-direction: column;
         }
 
         .span {
@@ -45,7 +51,7 @@
             padding: 10px;
             width: 150px;
             font-size: 15px;
-            margin-left: 30%;
+            align-self: center;
             margin-bottom: 10px;
             font-weight: bold;
             border-radius: 20px;
@@ -109,8 +115,9 @@
                 0 0 0 80px #ffffff;
         }
         .search-box { 
-            max-width: 600px;
+            width: 300px;
              margin: 20px; 
+             align-self: center;
         }
 
         .search-box input {
@@ -133,12 +140,13 @@
             height: 45px;
             border-radius: 30px;
             position: relative;
-            margin: -10px 0px 20px 24px;
+            margin-bottom: 20px;
             background: #8d2611;
             display: flex;
             flex-direction: row;
             justify-content: center;
             align-items: center;
+            align-self: center;
             
         }
         .text {
@@ -159,6 +167,7 @@
             flex-direction: row;
             justify-content: center;
             align-items: center;
+            align-self: center;
         }
         .crackers-text {
            position: absolute;
@@ -198,7 +207,9 @@
   }
 }
         #content {
-            padding: 20px
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
         }
         .category {
             background: rgb(131, 17, 17);
@@ -253,7 +264,7 @@
             padding-bottom: 20px;
         }
         .top-products-container {
-            display: none;
+            display: flex;
             flex-wrap: wrap;
             margin-bottom: 20px;
         }
@@ -371,6 +382,7 @@
     .top-product-details p {
             margin: 0;
             padding: 2px 0;
+            
         }
     .arrow-container.open .top-product-details {
         padding-top: 5px;
@@ -398,6 +410,168 @@
             border-radius: 15px; font-size: 0.85em; margin-top: 8px;
         }
     }
+@media (min-width: 769px) {
+        .diwali-h1 {
+            font-size: 50px;
+        }
+
+        .span {
+            width: 250px;
+            font-size: 25px;
+        }
+
+        .diwali-subtitle1 {
+            font-size: 20px;
+        }
+
+        .contact {
+            font-size: 20px;
+        }
+
+        .search-box {
+            min-width: 600px;
+        }
+
+        .fixed-marquee {
+            height: 40px;
+            padding: 10px;
+            font-size: 20px;
+        }
+
+        .top-deals-container {
+            width: 500px;
+            padding: 30px;
+        }
+
+        .crackers-list-container    {
+            width: 500px;
+            padding: 30px;
+        }
+
+        .crackers-text {
+            font-size: 30px;
+        }
+        .text {
+            font-size: 30px;
+        }
+
+        .top-products-container {
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        padding: 40px;
+    }
+    .top-product-card {
+        background: linear-gradient(135deg, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0.05) 100%);
+        border-radius: 12px;
+        width: 30%;
+        padding: 10px;
+        min-height: 250px ;
+        margin-right: 40px;
+        margin-bottom: 10px;
+        transition: all 0.3s ease;
+        border: 0.2px solid #bfbfbf;
+        cursor: pointer;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .top-product-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 0 30px 3px rgba(50, 48, 47, 0.3);
+        }
+    .top-product-image {
+            width: 100%; 
+            height: auto; 
+            display: flex; 
+            align-items: center; 
+            justify-content: center;
+            margin-bottom: 15px; 
+            background: transparent; 
+        }
+    .top-img { 
+            height: 250px; 
+            width: 100%; 
+            border-radius: 10px; 
+    }
+    .arrow-container {
+        display: flex;
+        flex-direction: column;
+        background-color: transparent;
+        padding: 5px;
+    }
+    .arrow1 {
+        font-size: 23px;
+        color: #000;
+        margin-right:6px;
+        margin-bottom: 8px;
+        transition: transform 0.3s ease;
+        transform-origin: center center;
+    }
+
+    .arrow-container.open .arrow1 {
+            transform: rotate(90deg);
+        }
+    .arrow-flex {
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+    }
+    .top-product-details {
+            overflow: hidden;
+            max-height: 0px;
+            transition:  max-height 0.4s ease, padding 0.3s ease;
+            font-size: 18px; 
+            color: rgba(145, 9, 9, 0.8);
+            padding: 0;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+        }
+
+    .top-product-details p {
+            margin: 0;
+            padding: 2px 0;
+            
+        }
+    .arrow-container.open .top-product-details {
+        padding-top: 5px;
+        margin-bottom: 5px;
+    }
+    
+    .top-product-name { 
+            font-size: 23px; 
+            font-weight: 600;
+            font-family: 'Courier New',; 
+            margin-bottom: 12px; 
+            color: #48453b; 
+        }
+
+    .top-product-price { 
+            font-size: 25px; 
+            font-weight: bold; 
+            color: #6bcf7f; 
+            margin-top: 10px; 
+            margin-left: 4px;
+        }
+
+    .category-img {
+        height: 90px;
+    }
+    .category-title {
+        font-size: 25px;
+    }
+
+    .product-name {
+        font-size: 20px;
+    }
+
+    .product-price {
+        font-size: 20px;
+    }
+
+}
     </style>
     <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXX"></script>
