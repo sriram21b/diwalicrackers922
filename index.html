@@ -15,7 +15,7 @@
         }
         .header {
             text-align: center;
-            padding: 60px;
+            padding: 50px;
             width: 100%;
             background: linear-gradient(to bottom, black, orange);
             border-radius: 0px;
@@ -39,24 +39,39 @@
             filter: brightness();
             opacity: 200%; 
         }
-        .god-img-container {
+
+        .span {
+            background-color: #850f0f;
+            padding: 10px;
+            width: 150px;
+            font-size: 15px;
+            margin-left: 77px;
+            margin-bottom: 10px;
+            
+            font-weight: bold;
+            border-radius: 20px;
+        }
+
+        .contact-container {
             display: flex;
             flex-direction: row;
-            justify-content: space-between;
-            margin-top: -30px;
-    
-        }
-        .god1-img {
-            height: 80px;
-            width: auto;
+            justify-content: space-around;
+            filter: brightness();
+            margin-top: 20px;
         }
 
-        .god2-img {
-            height: 70px;
-            width: auto;
-            margin-right: 20px;
-
+        .contact {
+            font-size: 12px;
+            display: flex;
+            align-items: center;
+            font-weight: bold;
         }
+
+        .phone-img {
+            height:20px;
+            margin-bottom: 2px;
+        }
+        
         .diwali-h1 {
             text-shadow:
                 0 0 0 0 #ffffff,
@@ -73,12 +88,17 @@
             text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
         }
         .diwali-subtitle1 {
-            font-size: 13px;
+            font-size: 15px;
             margin-bottom: 10px;
+            font-weight: bold;
         }
         .subtitle { 
             font-size: 1.3em; 
-            opacity: 0.95; 
+            opacity: 0.95; text-shadow:
+                0 0 0 0 #ffffff,
+                0 0 0 10px orange,
+                0 0 0 40px yellow,
+                0 0 0 80px #ffffff;
         }
         .search-box { 
             max-width: 600px;
@@ -100,6 +120,27 @@
         
         }
 
+        .top-deals-container {
+            width: 200px;
+            height: 45px;
+            border: 1px solid rgb(234, 6, 6);
+            border-radius: 10px;
+            position: relative;
+            margin: -10px 0px 20px 80px;
+            background: #cc1818;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            
+        }
+        .text {
+            position: absolute;
+            white-space: nowrap;
+            font-size: 20px;
+            padding-top: 4px;
+    
+        }
         .fixed-marquee {
 
             left: 0;
@@ -118,7 +159,7 @@
 
             display: inline-block; 
             white-space: nowrap;
-            animation: scroll-right 4s linear infinite;
+            animation: scroll-right 6s linear infinite;
 }
 
          @keyframes scroll-right {
@@ -133,7 +174,7 @@
             padding: 20px
         }
         .category {
-            background: rgb(118, 50, 50);
+            background: rgb(131, 17, 17);
             backdrop-filter: blur(3px);
             border-radius: 15px;
             padding: 5px 30px;
@@ -146,7 +187,7 @@
             margin-bottom: 20px;
             padding-top: 10px;
             padding-bottom: 10px;
-            border-bottom: 2px solid rgba(255, 107, 53, 0.5);
+            border-bottom: 2px solid rgba(235, 55, 14, 0.5);
             user-select: none;
         }
         .category-header .arrow {
@@ -168,7 +209,7 @@
         }
         .category-title { 
             font-size: 20px; 
-            color: #ff6b35; 
+            color: #e1d3ce; 
         }
         .products-grid {
             display: grid;
@@ -207,12 +248,12 @@
         .product-name { 
             font-size: 15px; 
             font-weight: 600; 
-            color: #ffd93d; }
+            color: #282724; }
 
         .product-price { 
             font-size: 15px; 
             font-weight: bold; 
-            color: #6bcf7f; 
+            color: #30ae4a; 
      }
         .company-badge {
             display: inline-block; padding: 4px 10px;
@@ -301,11 +342,16 @@
             <source src="diwali.mp4" type="video/mp4">
         </video>
         <div class="header-content">
-            <h1 class="diwali-h1">VY Diwali Crackers</h1>
-            <p class="diwali-subtitle1">Shop No: 922 (AU Engg. Clg Helipad Ground)</p>
-            <p class="diwali-subtitle">Light Up Your Celebrations!</p>
+            <h1 class="diwali-h1">VY <br>Diwali Crackers</h1>
+            <div class="span">SHOP NO : 922</div> 
+                <p class = "diwali-subtitle1">AU Engg. Clg Helipad Ground</p>
         </div>
+        <div class="contact-container">
+                <p class="contact"><img src="Phone.png" class="phone-img"/>+91 9000072880</p>
+                <p class="contact"><img src="Phone.png" class="phone-img"/>+91 8688277561</p>
+            </div>
     </div>
+
     <div class="search-box">
         <input type="search" id="searchInput" placeholder="🔍 Search for crackers..." onkeyup="searchProducts()">
     </div>
@@ -314,7 +360,11 @@
   Have a Safe Diwali !! 🪔
 </div>
 </div>
+  
     <div id="content">
+        <div class="top-deals-container">
+    <h1 class="text">!! Top Deals !!</h1>
+  </div>
         <div class="top-products-container" id="topProducts">
              <div class="top-product-card">
                     <div class="top-product-image">
