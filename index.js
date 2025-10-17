@@ -38,7 +38,9 @@ function searchProducts() {
 
         products.forEach(product => {
             const productName = product.querySelector(".product-name").textContent.toLowerCase()
-            if(productName.includes(searchValue) || categoryTitle.includes(searchValue)) {
+            const productPrice = product.querySelector(".product-price").textContent;
+            const price = parseFloat(productPrice.replace(/[₹,]/g, ""))
+            if(productName.includes(searchValue) || categoryTitle.includes(searchValue) || price.toString().includes(searchValue)) {
                 product.style.display = "flex"
                 anyMatch = true
                 hasVisibleProducts = true
