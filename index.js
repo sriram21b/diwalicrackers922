@@ -55,8 +55,8 @@ function searchProducts() {
         category.style.display = hasVisibleProducts || searchValue === '' ? 'block' : 'none';
     })
     if(searchValue === "" || !anyMatch) {
-        topProductsEl.style.display = "flex"
-        topdealsContainerEl.style.display = "flex"
+        topProductsEl.style.display = "none"
+        topdealsContainerEl.style.display = "none"
     }
     else {
         topProductsEl.style.display = "none"
