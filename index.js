@@ -28,6 +28,7 @@ function searchProducts() {
     const searchValue = document.getElementById("searchInput").value.toLowerCase()
     const categories = document.querySelectorAll(".category")
     const topProductsEl = document.getElementById("topProducts")
+    const topdealsContainerEl = document.getElementById("topdeals-container")
     let anyMatch = false;
 
     categories.forEach(category => {
@@ -38,7 +39,7 @@ function searchProducts() {
         products.forEach(product => {
             const productName = product.querySelector(".product-name").textContent.toLowerCase()
             if(productName.includes(searchValue) || categoryTitle.includes(searchValue)) {
-                product.style.display = "block"
+                product.style.display = "flex"
                 anyMatch = true
                 hasVisibleProducts = true
             }
@@ -53,9 +54,12 @@ function searchProducts() {
     })
     if(searchValue === "" || !anyMatch) {
         topProductsEl.style.display = "flex"
+        topdealsContainerEl.style.display = "flex"
     }
     else {
         topProductsEl.style.display = "none"
+        topdealsContainerEl.style.display = "none"
+
     }
     }
 
