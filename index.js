@@ -24,6 +24,49 @@
         });
     });
     
+        // Handle Top Product Arrow Toggle
+document.querySelectorAll('.arrow-container').forEach(container => {
+  const details = container.querySelector('.top-product-details');
+
+  container.addEventListener('click', (e) => {
+    e.stopPropagation(); // Prevent event bubbling
+    const isOpen = container.classList.contains('open');
+
+    // Collapse all other open ones
+    document.querySelectorAll('.arrow-container.open').forEach(c => {
+      if (c !== container) {
+        c.classList.remove('open');
+        const d = c.querySelector('.top-product-details');
+        if (d) {
+          d.style.maxHeight = '0px';
+        }
+      }
+    });
+
+    // Toggle this one
+    if (!isOpen) {
+      container.classList.add('open');
+      if (details) {
+        // Temporarily set to auto to get the real height
+        details.style.maxHeight = 'none';
+        const height = details.scrollHeight;
+        details.style.maxHeight = '0px';
+        // Force reflow
+        void details.offsetHeight;
+        // Now animate to the real height
+        requestAnimationFrame(() => {
+          details.style.maxHeight = height + 'px';
+        });
+      }
+    } else {
+      container.classList.remove('open');
+      if (details) {
+        details.style.maxHeight = '0px';
+      }
+    }
+  });
+});
+
 function searchProducts() {
     const searchValue = document.getElementById("searchInput").value.toLowerCase()
     const categories = document.querySelectorAll(".category")
@@ -55,8 +98,8 @@ function searchProducts() {
         category.style.display = hasVisibleProducts || searchValue === '' ? 'block' : 'none';
     })
     if(searchValue === "" || !anyMatch) {
-        topProductsEl.style.display = "none"
-        topdealsContainerEl.style.display = "none"
+        topProductsEl.style.display = "flex"
+        topdealsContainerEl.style.display = "flex"
     }
     else {
         topProductsEl.style.display = "none"

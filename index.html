@@ -129,14 +129,13 @@
         }
 
         .top-deals-container {
-            width: 200px;
+           width: 300px;
             height: 45px;
-            border: 1px solid rgb(234, 6, 6);
-            border-radius: 10px;
+            border-radius: 30px;
             position: relative;
-            margin: -10px 0px 20px 80px;
-            background: #cc1818;
-            display: none;
+            margin: -10px 0px 20px 24px;
+            background: #8d2611;
+            display: flex;
             flex-direction: row;
             justify-content: center;
             align-items: center;
@@ -297,20 +296,23 @@
     h1 { font-size: 2em;}
 
     .top-products-container {
-        display: none;
+        display: flex;
         flex-wrap: wrap;
+        align-items: flex-start;
     }
     .top-product-card {
         background: linear-gradient(135deg, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0.05) 100%);
         border-radius: 12px;
         width: 47%;
-        flex-grow: 1;
         padding: 10px;
         margin-right: 10px;
         margin-bottom: 10px;
         transition: all 0.3s ease;
         border: 0.2px solid #bfbfbf;
         cursor: pointer;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
     }
     .top-product-card:hover {
             transform: translateY(-3px);
@@ -330,7 +332,49 @@
             width: 100%; 
             border-radius: 10px; 
     }
-  
+    .arrow-container {
+        display: flex;
+        flex-direction: column;
+        background-color: transparent;
+        padding: 5px;
+    }
+    .arrow1 {
+        color: #000;
+        margin-right:6px;
+        margin-bottom: 8px;
+        transition: transform 0.3s ease;
+        transform-origin: center center;
+    }
+
+    .arrow-container.open .arrow1 {
+            transform: rotate(90deg);
+        }
+    .arrow-flex {
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+    }
+    .top-product-details {
+            overflow: hidden;
+            max-height: 0px;
+            transition:  max-height 0.4s ease, padding 0.3s ease;
+            font-size: 14px; 
+            color: rgba(145, 9, 9, 0.8);
+            padding: 0;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+        }
+
+    .top-product-details p {
+            margin: 0;
+            padding: 2px 0;
+        }
+    .arrow-container.open .top-product-details {
+        padding-top: 5px;
+        margin-bottom: 5px;
+    }
     
     .top-product-name { 
             font-size: 14px; 
@@ -339,19 +383,14 @@
             margin-bottom: 12px; 
             color: #48453b; 
         }
-    .top-product-details {
-            display: flex; 
-            justify-content: 
-            space-between; 
-            margin-bottom: 8px;
-            font-size: 14px; 
-            color: rgba(242, 20, 20, 0.8);
-        }
+
     .top-product-price { 
             font-size: 14px; 
             font-weight: bold; 
             color: #6bcf7f; 
-            margin-top: 10px; }
+            margin-top: 10px; 
+            margin-left: 4px;
+        }
     .top-company-badge {
             display: inline-block; padding: 4px 10px;
             background: rgba(255,107,53,0.3);
@@ -401,36 +440,56 @@
         <div class="top-products-container" id="topProducts">
              <div class="top-product-card">
                     <div class="top-product-image">
-                        <img src="bijili.jpeg" class="top-img"/>
+                        <img src="kids-pack.jpeg" class="top-img"/>
                     </div>
-                    <div class="top-product-name">Bijili Crackers</div>
-                    <div class="top-product-details"><span>Quantity: </span><span>1 Pack</span></div>
-                    <div class="top-product-price">₹49.00</div>
+                   <div class="arrow-container">
+                        <div class="arrow-flex">
+                    <span class="arrow1">&#9654;</span>
+                    <div class="top-product-name">Kids Safe Pack</div>
+                    </div>
+                    <div class="top-product-details">
+                        <p>15cm 2 colors</p>
+                        <p>Ground Chakras</p>
+                        <p>Flower Pot</p>
+                        <p>Threads small</p>
+                        <p>Pencil</p>
+                        <p>Sanke box</p>
+                        <p>Match box</p>
+                        <p>Nat Flower Pots 2</p>
+                    </div>
+                         </div>
+                    <div class="top-product-price">₹499.00</div>
                 </div>
                  <div class="top-product-card">
                     <div class="top-product-image">
-                        <img src="ballon.jpeg" class="top-img"/>
+                        <img src="budget-pack.jpeg" class="top-img"/>
                     </div>
-                    <div class="top-product-name">Hot Air Ballon</div>
-                    <div class="top-product-details"><span>Quantity:</span><span>4 PCS</span></div>
-                    <div class="top-product-price">₹99.00</div>
-                </div>
-                 <div class="top-product-card">
-                    <div class="top-product-image">
-                        <img src="chakra-top.jpg" class="top-img"/>
+                    <div class="arrow-container">
+                        <div class="arrow-flex">
+                    <span class="arrow1">&#9654;</span>
+                    <div class="top-product-name">Budget Pack</div>
                     </div>
-                    <div class="top-product-name">Bhoo Chakra</div>
-                    <div class="top-product-details"><span>Quantity:</span><span>4 PCS</span></div>
-                    <div class="top-product-price">₹119.00</div>
-                </div>
-                 <div class="top-product-card">
-                    <div class="top-product-image">
-                        <img src="flower-pot.jpeg" class="top-img"/>
+                    <div class="top-product-details">
+                        <p>Pencil</p>
+                        <p>Sanke box</p>
+                        <p>Match box</p>
+                        <p>Nat Flower Pots 2</p>
+                        <p>15cm colors 4 boxes</p>
+                        <p>Ground Chakras 2</p>
+                        <p>Flower Pot 2 Med</p>
+                        <p>Pencils 2</p>
+                        <p>Match box 1 Multicolor</p>
+                        <p>Bijili 2</p>
+                        <p>Threads 2</p>
+                        <p>Chitapatalu 2</p>
+                        <p>Stones 1</p>
+                        <p>3inch parabomb 1Packet</p>
                     </div>
-                    <div class="top-product-name">Flower pot</div>
-                    <div class="top-product-details"><span>Quantity:</span><span>10 PCS</span></div>
-                    <div class="top-product-price">₹149.00</div>
+                         </div>
+                    
+                    <div class="top-product-price">₹999.00</div>
                 </div>
+                
                 </div>
 
          <div class="crackers-list-container">
